@@ -130,16 +130,7 @@
                          <a href="add_post.php?source=posts.php">Add a posts</a>
                      </li>
                  </ul>
-             </li>
-             <li>
-                 <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-             </li>
-             <li>
-                 <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-             </li>
-             <li>
-                 <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-             </li>
+             </li>        
              <li class="">
                  <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
              </li>
@@ -158,9 +149,7 @@
                      </li>
                  </ul>
              </li>
-             <li>
-                 <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
-             </li>
+         
          </ul>
      </div>
      <!-- /.navbar-collapse -->

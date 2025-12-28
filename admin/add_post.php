@@ -50,8 +50,7 @@
 
                             $post_tags = $_POST['post_tags'];
                             $post_content = $_POST['post_content'];
-                            $post_date = date('Y-m-d');
-                            // $post_comment_count = 4;
+                            $post_date = date('Y-m-d H:i:s');
 
                             // Move the uploaded file
                             move_uploaded_file($post_image_temp, "../images/$post_image");
@@ -64,10 +63,10 @@
                             // Initialize a prepared statement
                             $stmt = mysqli_prepare($connection, $query);
 
-                            // Bind parameters to the prepared statement
+                            // Bind parameters to the prepared statement (types: i=int, s=string)
                             mysqli_stmt_bind_param(
                                 $stmt,
-                                "issssssis",
+                                "issssss",
                                 $post_category_id,
                                 $post_title,
                                 $post_author,
@@ -75,7 +74,6 @@
                                 $post_image,
                                 $post_content,
                                 $post_tags,
-                                $post_comment_count,
                                 $post_status
                             );
 
@@ -85,6 +83,8 @@
                             // Check for query execution success
                             if ($success) {
                                 echo "Post created successfully.";
+                                header("Location: posts.php");
+                                exit();
                             } else {
                                 echo "Error creating post: " . mysqli_error($connection);
                             }
